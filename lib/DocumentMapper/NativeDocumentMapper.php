@@ -430,7 +430,7 @@ class NativeDocumentMapper implements DocumentMapper
      */
     public function generateContentDocumentId($contentId, $languageCode = null)
     {
-        return strtolower("content{$contentId}{$languageCode}");
+        return strtolower("content{$contentId}lang{$languageCode}");
     }
 
     /**
@@ -448,7 +448,7 @@ class NativeDocumentMapper implements DocumentMapper
      */
     public function generateLocationDocumentId($locationId, $languageCode = null)
     {
-        return strtolower("location{$locationId}{$languageCode}");
+        return strtolower("location{$locationId}lang{$languageCode}");
     }
 
     /**
