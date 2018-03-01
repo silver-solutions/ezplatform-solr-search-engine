@@ -88,9 +88,10 @@ class BlockDocumentsContentFields extends ContentTranslationFieldMapper
                 $indexFields = $fieldType->getIndexData($field, $fieldDefinition);
 
                 foreach ($indexFields as $indexField) {
-                    if ($indexField->value === null) {
+                    // FIXME Dirty quick-fix for issue https://jira.ez.no/browse/EZP-28738
+                    /*if ($indexField->value === null) {
                         continue;
-                    }
+                    }*/
 
                     if ($indexField->type instanceof FieldType\FullTextField) {
                         continue;
